@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "/home/jonatas/anaconda2/envs/retrieval/bin/python",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+}
