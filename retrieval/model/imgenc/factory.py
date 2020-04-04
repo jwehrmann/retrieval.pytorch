@@ -9,32 +9,6 @@ _image_encoders = {
         'class': precomp.SimplePrecomp,
         'args': {}
     },
-    'hierarchical': {
-        'class': precomp.HierarchicalEncoder,
-        'args': {
-            'img_dim': 2048,
-        },
-    },
-    'multihead': {
-        'class': precomp.MultiheadAttentionEncoder,
-        'args': {
-            'img_dim': 2048,
-            'dropout': 0.1,
-        },
-    },
-    'img_gru': {
-        'class': precomp.GRUImgEncoder,
-        'args': {
-            'img_dim': 2048,
-        },
-    },
-    'img_gru_k8': {
-        'class': precomp.GRUImgEncoder,
-        'args': {
-            'img_dim': 2048,
-            'k': 8,
-        },
-    },
     'scan': {
         'class': precomp.SCANImagePrecomp,
         'args': {
@@ -107,16 +81,6 @@ _image_encoders = {
             'cnn_type': 'resnet152',
         },
     },
-    'img_proj': {
-        'class': precomp.ImageProj,
-        'args': {
-            'img_sa': False,
-            'projection': False,
-            'non_linear_proj': False,
-            'projection_sa': False,
-        },
-    },
-
 }
 
 

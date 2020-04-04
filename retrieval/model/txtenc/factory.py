@@ -20,13 +20,13 @@ __text_encoders__ = {
         'args': {
         },
     },
-    'scan': {
-        'class': txtenc.EncoderText,
-        'args': {
-            'use_bi_gru': True,
-            'num_layers': 1,
-        },
-    },
+    # 'scan': {
+    #     'class': txtenc.EncoderText,
+    #     'args': {
+    #         'use_bi_gru': True,
+    #         'num_layers': 1,
+    #     },
+    # },
 }
 
 
