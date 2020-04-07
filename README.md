@@ -77,6 +77,17 @@ python run.py options/adapt/coco/adapt_i2t.yaml
 python test.py options/adapt/coco/adapt_i2t.yaml -data_split test
 ```
 
+### Pre-trained models
+
+#### F30k models:
+
+| Dataset| Model      | Image Annotation R@1 | Image Retrieval R@1 |
+|:--:    | :--:       | :--:                | :--:                 |
+| F30k   | [ADAPT-t2i](https://wehrmann.s3-us-west-2.amazonaws.com/adapt_models/f30k_adapt_t2i.tar)  |   76.4%                  |   57.8%                  |
+| F30k   | [ADAPT-i2t](https://wehrmann.s3-us-west-2.amazonaws.com/adapt_models/f30k_adapt_i2t.tar)  | 66.3%                   |   53.8%                    |
+| COCO | [ADAPT-t2i](https://wehrmann.s3-us-west-2.amazonaws.com/adapt_models/coco_adapt_t2i.tar) | 75.4% |  64.0%    | 
+| COCO | [ADAPT-i2t](https://wehrmann.s3-us-west-2.amazonaws.com/adapt_models/coco_adapt_i2t.tar) | 67.2%    | 57.8%   | 
+
 ## Citation
 
 If you find this research or code useful, please consider citing our paper:
