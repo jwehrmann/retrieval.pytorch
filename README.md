@@ -74,18 +74,18 @@ You can reproduce our main results using the following scripts.
 
 * Training on Flickr30k:
 ```
-python run.py options/adapt/f30k/adapt_t2i.yaml
-python test.py options/adapt/f30k/adapt_t2i.yaml -data_split test
-python run.py options/adapt/f30k/adapt_i2t.yaml
-python test.py options/adapt/f30k/adapt_i2t.yaml -data_split test
+python run.py options/adapt/f30k/t2i.yaml
+python test.py options/adapt/f30k/t2i.yaml -data_split test
+python run.py options/adapt/f30k/i2t.yaml
+python test.py options/adapt/f30k/i2t.yaml -data_split test
 ```
 
 * Training on MS COCO:
 ```
-python run.py options/adapt/coco/adapt_t2i.yaml
-python test.py options/adapt/coco/adapt_t2i.yaml -data_split test
-python run.py options/adapt/coco/adapt_i2t.yaml
-python test.py options/adapt/coco/adapt_i2t.yaml -data_split test
+python run.py options/adapt/coco/t2i.yaml
+python test.py options/adapt/coco/t2i.yaml -data_split test
+python run.py options/adapt/coco/i2t.yaml
+python test.py options/adapt/coco/i2t.yaml -data_split test
 ```
 
 ### Ensembling results
@@ -94,12 +94,12 @@ To ensemble multiple models (ADAPT-Ens) one can use:
 
 * MS COCO models:
 ```
-python test_ens.py options/adapt/coco/adapt_t2i.yaml options/adapt/coco/adapt_i2t.yaml -data_split test
+python test_ens.py options/adapt/coco/t2i.yaml options/adapt/coco/i2t.yaml -data_split test
 ```
 
 * F30k models:
 ```
-python test_ens.py options/adapt/f30k/adapt_t2i.yaml options/adapt/f30k/adapt_i2t.yaml -data_split test
+python test_ens.py options/adapt/f30k/t2i.yaml options/adapt/f30k/i2t.yaml -data_split test
 ```
 
 ### Pre-trained models
