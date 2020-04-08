@@ -88,10 +88,24 @@ python run.py options/adapt/coco/adapt_i2t.yaml
 python test.py options/adapt/coco/adapt_i2t.yaml -data_split test
 ```
 
+### Ensembling results
+
+To ensemble multiple models (ADAPT-Ens) one can use: 
+
+* MS COCO models:
+```
+python test_ens.py options/adapt/coco/adapt_t2i.yaml options/adapt/coco/adapt_i2t.yaml -data_split test
+```
+
+* F30k models:
+```
+python test_ens.py options/adapt/f30k/adapt_t2i.yaml options/adapt/f30k/adapt_i2t.yaml -data_split test
+```
+
 ### Pre-trained models
 <a name="pretrained"/>
 
-We make available all the main models generated in this research. Each file has the best model of the run (according to validation result), the last checkpoint generated, all tensorboard logs (loss and recall curves) to ease the comparison with future work, result files, and configuration options used for training. 
+We make available all the main models generated in this research. Each file has the best model of the run (according to validation result), the last checkpoint generated, all tensorboard logs (loss and recall curves), result files, and configuration options used for training. 
 
 #### F30k models:
 
@@ -99,8 +113,10 @@ We make available all the main models generated in this research. Each file has 
 |:--:    | :--:       | :--:                | :--:                 |
 | F30k   | [ADAPT-t2i](https://wehrmann.s3-us-west-2.amazonaws.com/adapt_models/f30k_adapt_t2i.tar)  |   76.4%                  |   57.8%                  |
 | F30k   | [ADAPT-i2t](https://wehrmann.s3-us-west-2.amazonaws.com/adapt_models/f30k_adapt_i2t.tar)  | 66.3%                   |   53.8%                    |
+| F30k | ADAPT-ens | 76.2%    | 60.5%   | 
 | COCO | [ADAPT-t2i](https://wehrmann.s3-us-west-2.amazonaws.com/adapt_models/coco_adapt_t2i.tar) | 75.4% |  64.0%    | 
 | COCO | [ADAPT-i2t](https://wehrmann.s3-us-west-2.amazonaws.com/adapt_models/coco_adapt_i2t.tar) | 67.2%    | 57.8%   | 
+| COCO | ADAPT-ens | 75.3%    | 64.4%   | 
 
 ## Citation
 <a name="citation"/>
