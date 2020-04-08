@@ -10,7 +10,17 @@ This code implements a novel approach for training image-text alignment models, 
 ADAPT is designed to adjust an intermediate representation of instances from a modality _a_ using an embedding vector of an instance from modality _b_. Such an adaptation is designed to filter and enhance important information across internal features, allowing for guided vector representations – which resembles the working of attention modules, though far more computationally efficient. For further information, please read our [AAAI 2020 paper](https://www.researchgate.net/publication/337636199_Adaptive_Cross-modal_Embeddings_for_Image-Text_Alignment).
 
 
+## Table of Contents
+
+* [Installation](#installation)
+* [Quick start](#quickstart)
+* [Training models](#training)
+* [Pre-trained models](#pretrained)
+* [Citation](#citation)
+* [Poster](#poster)
+
 ## Installation
+<a name="installation"/>
 
 ### 1. Python 3 & Anaconda
 
@@ -33,6 +43,8 @@ wget https://scanproject.blob.core.windows.net/scan-data/data.zip
 ```
 
 ## Quick start
+<a name="quickstart"/>
+
 
 ### Setup
 
@@ -55,9 +67,8 @@ And then only run the declared name of the alias to have everything configured:
 $ adapt
 ```
 
-### Training Models
-
-#### ADAPT-T2I
+## Training Models
+<a name="training"/>
 
 You can reproduce our main results using the following scripts.
 
@@ -78,6 +89,9 @@ python test.py options/adapt/coco/adapt_i2t.yaml -data_split test
 ```
 
 ### Pre-trained models
+<a name="pretrained"/>
+
+We make available all the main models generated in this research. Each file has the best model of the run (according to validation result), the last checkpoint generated, all tensorboard logs (loss and recall curves) to ease the comparison with future work, result files, and configuration options used for training. 
 
 #### F30k models:
 
@@ -89,6 +103,7 @@ python test.py options/adapt/coco/adapt_i2t.yaml -data_split test
 | COCO | [ADAPT-i2t](https://wehrmann.s3-us-west-2.amazonaws.com/adapt_models/coco_adapt_i2t.tar) | 67.2%    | 57.8%   | 
 
 ## Citation
+<a name="citation"/>
 
 If you find this research or code useful, please consider citing our paper:
 
@@ -103,6 +118,7 @@ If you find this research or code useful, please consider citing our paper:
 
 
 ## Poster
+<a name="poster"/>
 
 <p align="center">
     <img src="assets/adapt_poster.png" width="300"/>
